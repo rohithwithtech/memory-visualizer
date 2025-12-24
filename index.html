@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Management Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Dynamic Memory Management Visualizer</h1>
+
+<div class="controls">
+    <input id="frames" type="number" placeholder="Frames (RAM size)">
+    <input id="pages" placeholder="Pages e.g. 7 0 1 2 0 3">
+    
+    <select id="algo">
+        <option value="fifo">FIFO</option>
+        <option value="lru">LRU</option>
+        <option value="vm">Virtual Memory</option>
+    </select>
+
+    <button onclick="simulate()">Simulate</button>
+</div>
+
+<div class="section">
+    <h2>RAM</h2>
+    <div id="memory"></div>
+</div>
+
+
+<div class="section">
+    <h2>Disk (Virtual Memory)</h2>
+    <div id="disk"></div>
+</div>
+
+<div class="section">
+    <h2>Log</h2>
+    <div id="log"></div>
+</div>
+
+<div class="section">
+    <h2>Page Fault Graph</h2>
+    <canvas id="graph" width="600" height="200"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
